@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{ /* se eu quiser trocar alguma # das cores, todas no css serão trocadas;
+        a funçao das variáveis é essa, permitir a alteração de todos elementos em apenas um */
+
+    --cor-primaria: #000000; /* se eu trocar a cor, todos elementos com cor-primaria serão mudados */
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+
+}
+
+* {
+    margin: 0;
+    padding: 0; /* o padding vai medir a distancia do conteudo das bordas */
+}
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    /*height: 100vh;*/
+    box-sizing: border-box; /* tipo de bordas */
+    
+}
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.apresentacao__conteudo{
+    width: 615px;    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 10px; 
+    width: 50%;
+}
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem; /* isso é o mesmo que 36 pixels-- 1rem = 16 pixels */
+    font-family: "Roboto", sans-serif;
+    margin: 10px;
+}
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem; /* 24 pixels */
+    margin: 10px;
+
+}
+.apresentacao__links{
+    display: flex; /* libera o flexbox e automaticamente acontece uma separação lado a lado (horizontal) */
+    justify-content: space-between; /* espaço entre os elementos */
+    flex-direction: column; /* alinhados verticalmente em forma de coluna */
+    align-items: center; 
+    gap: 32px; /* espaçamento entre os itens */
+
+}
+.apresentacao__links__subtitulo{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao{
+    /* background-color: #22d4fd;  */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    width: 280px; /* largura */
+    border-radius: 8px; /* borda redonda */
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    font-size: 1.5rem; /* tamanho da fonte */
+    padding: 21.5px 0px; /* primeiro valor vertical, segundo valor horizontal */
+    text-decoration: none; /* sem decoração */
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    margin: 10px;
+}
+.apresentacao__links__navegacao:hover{
+    background-color: gray;
+    width: 500px;
+}
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular';
+}
+.cabecalho__menu__link{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 600px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+.cabecalho{
+    padding: 2% 0% 0% 15%; /* valores em ordem: 5% 0% 0% 10% -- superior, direita, inferior superior*/
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.apresentacao__imagem{
+    width: 50%;
+}
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
